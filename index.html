@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>System Dashboard Simulator</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2>Dashboard</h2>
+    <ul>
+      <li class="active">Overview</li>
+      <li>Processes</li>
+      <li>Performance</li>
+      <li>Settings</li>
+    </ul>
+  </div>
+
+  <!-- Main -->
+  <main>
+    
+    <!-- Topbar -->
+    <div class="topbar">
+      <h2>System Monitor</h2>
+      <span id="time"></span>
+    </div>
+
+    <!-- Cards -->
+    <div class="cards">
+
+      <div class="card">
+        <h3>CPU</h3>
+        <div class="value" id="cpuText">0%</div>
+        <div class="progress"><div id="cpuBar"></div></div>
+      </div>
+
+      <div class="card">
+        <h3>RAM</h3>
+        <div class="value" id="ramText">0%</div>
+        <div class="progress"><div id="ramBar"></div></div>
+      </div>
+
+      <div class="card">
+        <h3>Disk</h3>
+        <div class="value" id="diskText">0%</div>
+        <div class="progress"><div id="diskBar"></div></div>
+      </div>
+
+      <div class="card">
+        <h3>GPU</h3>
+        <div class="value" id="gpuText">0%</div>
+        <div class="progress"><div id="gpuBar"></div></div>
+      </div>
+
+    </div>
+
+    <!-- Graph -->
+    <div class="graph-container">
+      <div class="stats">Usage History</div>
+      <canvas id="usageChart"></canvas>
+    </div>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

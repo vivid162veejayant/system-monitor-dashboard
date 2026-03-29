@@ -1,0 +1,158 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #0b1220;
+  color: #f8fafc;
+  display: flex;
+}
+
+.sidebar {
+  width: 220px;
+  background: #0f172a;
+  padding: 20px;
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.sidebar li.active {
+  background: #1e293b;
+  border-radius: 6px;
+}
+
+main {
+  flex: 1;
+  padding: 20px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1e293b;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background: #1e293b;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+.value {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.progress {
+  background: #334155;
+  border-radius: 6px;
+  height: 10px;
+  overflow: hidden;
+}
+
+.progress div {
+  background: #22c55e;
+  height: 100%;
+}
+
+.graph {
+  background: #1e293b;
+  height: 200px;
+  border-radius: 8px;
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+}
+
+tbody tr:nth-child(even) {
+  background: #1e293b;
+}
+
+.progress div {
+  height: 100%;
+  transition: width 0.6s ease, background 0.6s ease;
+}
+.value {
+  transition: color 0.6s ease;
+}
+
+.graph-container {
+  background: #1e293b;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+canvas {
+  width: 100%;
+  height: 200px;
+}
+
+.stats {
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+button {
+  margin-top: 8px;
+  background: #334155;
+  border: none;
+  color: #f8fafc;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+button:hover {
+  background: #475569;
+}
+
+.alert-box {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #ef4444;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
