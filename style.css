@@ -1,3 +1,5 @@
+
+
 body {
   margin: 0;
   font-family: sans-serif;
@@ -114,6 +116,37 @@ tbody tr:nth-child(even) {
   padding: 16px;
   border-radius: 8px;
   margin-bottom: 20px;
+}
+
+/* Layout fix for footer positioning */
+main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Push footer to bottom */
+.footer {
+  margin-top: auto;
+  background: #0f172a;
+  padding: 12px 20px;
+  border-top: 1px solid #334155;
+  border-radius: 8px;
+}
+
+/* Footer content styling */
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+/* Subtle hover effect */
+.footer-content span:hover {
+  color: #f8fafc;
+  transition: color 0.3s ease;
 }
 
 canvas {
